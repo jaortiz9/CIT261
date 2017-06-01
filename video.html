@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Video, Audio, Canvas</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+		<h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>Video, Audio, Canvas</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loops.html">Loops</a></li>
+              <li><a href="object.html">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a href="ajax.html">AJAX</a></li>
+              <li><a href="api.html">Local Storage API</a></li>
+              <li><a href="dom.html">DOM Manipulation</a></li>
+              <li><a href="manipCSS.html">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a href="eventsJS.html">JS Events</a></li>
+              <li><a class= "active" href="#">Video, Audio, Canvas</a></li>
+              
+            </ul>
+        </div>
+        
+        <div class="container">
+			<h2>Video</h2>
+			<h4>Happy Path</h4>
+			<div class="row">
+					<div class="col">
+					<h5>MP4 file with Sound</h5>
+					<video width="200" height ="250" controls>
+						<source src="sample2.mp4" type="video/mp4">
+						<source src="sample2.webm" type="video/webm">
+					</video>
+				</div>
+				<div class="col">
+					<h5>MP4 file no sound</h5>
+					<video width="200" height ="250" controls>
+						<source src="sample.mp4" type="video/mp4">
+						<source src="sample.webm" type="video/webm">
+					</video>
+				</div>
+				<div class="col">
+					<h5>WebM file no sound</h5>
+					<video width="200" height ="250" controls>
+						<source src="sample.webm" type="video/webm">
+						<source src="sample.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+			
+			<h4>Nasty Path</h4>
+			<div class="row">
+				<div class="col">
+					<h5>No Source</h5>
+					<video width="200" height ="250" controls>
+						<source type="video/mp4">
+					</video>
+				</div>
+				<div class="col">
+					<h5>Invalid Source</h5>
+					<video width="200" height ="250" controls>
+						<source src="samples2.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="col">
+					<h5>Swithching Types</h5>
+					<video width="200" height ="250" controls>
+						<source src="sample.webm" type="video/mp4">
+						<source src="sample.mp4" type="video/webm">
+					</video>
+				</div>
+				<div class="col">
+					<h5>No Type Tag</h5>
+					<video width="200" height ="250" controls>
+						<source src="sample.mp4"  >
+						<source src="sample.webm" >
+					</video>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="container">
+			<h2>Audio</h2>
+			<h4>Happy Path</h4>
+			<audio controls>
+                <source src="Budapest.mp3" type="audio/mpeg">
+                <source src="Budapest.ogg" type="audio/ogg">
+            </audio>	
+
+			<h4>Nasty Path</h4>
+			<div class="row">
+				<div class="col">
+					<h5>No Source</h5>
+					<audio controls>
+						<source src="" type="audio/mpeg">
+						<source src="" type="audio/ogg">
+					</audio>
+				</div>
+				<div class="col">
+					<h5>Switched Types</h5>
+					<audio controls>
+						<source src="Budapest.mp3" type="audio/ogg">
+						<source src="Budapest.ogg" type="audio/mpeg">
+					</audio>
+				</div>
+				<div class="col">
+					<h5>Video Source not Audio</h5>
+					<audio controls>
+						<source src="sample2.mp4" type="video/mp4">
+						<source src="sample2.webm" type="video/webm">
+					</audio>					
+				</div>
+				<div class="col">
+					<h5>Invalid sources</h5>
+					<audio controls>
+						<source src="CIT261%20Schedule.xlsx" type="audio/mpeg">
+					</audio>		
+				</div>			
+			</div>
+		</div>
+		
+		<div class="container">
+			<h2>Canvas</h2>
+			<h4>Happy Path</h4>
+			<div>
+				<h5>Rectangle</h5>
+				<canvas id="canvas" width="100" height="300" style="border:1px solid #000000;">
+				</canvas>	
+			
+				<h5>Diagnal Line</h5>
+				<canvas id="myLine" width="300" height="200" style="border:1px solid #00bfff;"> 
+				</canvas>
+					<script>
+					var c = document.getElementById("myLine");
+					var ctx = c.getContext("2d");
+					ctx.moveTo(0,0);
+					ctx.lineTo(100,200);
+					ctx.stroke();
+					</script>
+				
+				<h5>Circle</h5>
+				<canvas id="myCircle" width="200" height="100" style="border:1px solid #00bfff;">
+				</canvas>
+					<script>
+					var c = document.getElementById("myCircle");
+					var ctx = c.getContext("2d");
+					ctx.beginPath();
+					ctx.arc(95,50,40,0,2*Math.PI);
+					ctx.stroke();
+					</script> 
+			</div>
+		</div>
+    </body>
+</html>

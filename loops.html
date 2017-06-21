@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Loops, Conditional Statements</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>Loops, Conditional Statments, Functions, Variables, Parameters, Arrays, Associative Arrays</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a class= "active" href="#">Loops</a></li>
+              <li><a href="object.html">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a href="ajax.html">AJAX</a></li>
+              <li><a href="api.html">Local Storage API</a></li>
+              <li><a href="dom.html">DOM Manipulation</a></li>
+              <li><a href="manpiCSS.html">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a href="eventsJS.html">JS Events</a></li>
+              <li><a href="video.html">Video, Audio, Canvas</a></li>
+              
+            </ul>
+        </div>
+        <div class="loops">
+        	<h1>LOOPS</h1>
+    			<h4>For Loop</h4>
+        			<button onclick="myFor()">Traditional FOR Loop</button>
+        			<p id="for"></p>
+
+					<script>
+						function myFor(){
+						var cars = ["BMW", "Volvo", "Saab", "Ford"];
+						var text = "";
+						var i;
+						for (i = 0; i < cars.length; i++) {
+							text += cars[i] + "<br>";
+						}
+
+						document.getElementById("for").innerHTML = text;
+						}
+					</script>
+
+				<h4>For In Loop</h4>
+					<p id="forIn"></p>
+
+					<script>
+						var txt = "";
+						var person = [];
+							person[1] = "Sergio";
+							person[2] = "Janine";
+							person[3] = "Alexander";
+							person[4] = "Brian";
+							person[5] = "Stephany";
+						var x;
+						for (x in person) {
+							txt += person[x] + " "; 
+						}
+						document.getElementById("forIn").innerHTML = txt;
+					</script>
+
+				<h4>While Loop</h4>
+					<button onclick="myWhile()">Lets count 10 times</button>
+
+					<p id="while"></p>
+
+					<script>
+						function myWhile() {
+							var text = "";
+							var i = 0;
+							while (i < 10) {
+								text += "<br>The number is " + i;
+								i++;
+							}
+							document.getElementById("while").innerHTML = text;
+						}
+					</script>
+		</div>
+		<div class="conditional">
+			<h1>CONDITIONAL STATEMENTS</h1>
+				<h4>If Else Statment</h4>
+        			<button onclick="myIfElse()">Is it Morning, Day or Evening</button>
+        			<p id="ifElse"></p>
+
+					<script>
+						function myIfElse() {
+							var greeting;
+							var time = new Date().getHours();
+							if (time < 10) {
+								greeting = "Good morning";
+							} else if (time < 20) {
+								greeting = "Good day";
+							} else {
+								greeting = "Good evening";
+							}
+						document.getElementById("ifElse").innerHTML = greeting;
+						}
+					</script>
+
+				<h4>Switch Statment</h4>
+        			<button onclick="mySwitch()">What day is it today?</button>
+        			<p id="switch"></p>
+
+					<script>
+						function mySwitch(){
+							var day;
+							switch (new Date().getDay()) {
+								case 0:
+									day = "Sunday";
+									break;
+								case 1:
+									day = "Monday";
+									break;
+								case 2:
+									day = "Tuesday";
+									break;
+								case 3:
+									day = "Wednesday";
+									break;
+								case 4:
+									day = "Thursday";
+									break;
+								case 5:
+									day = "Friday";
+									break;
+								case  6:
+									day = "Saturday";
+									break;
+							}
+							document.getElementById("switch").innerHTML = "Today is " + day;
+						}
+					</script>
+        
+    			<h4>For each:</h4>
+					<p>If else: ex. if (a less than 10 || a greater than 10) what does this do?</p>
+
+		</div>
+		<div class="functions">
+			<h1>FUNCTIONS</h1>
+					<p>Functions are used in JavaScript to perform a task</p>
+					<p>I used functions in my example above</p>
+					<p>They can return values, execute math problems, edit code in HTML.</p>
+		</div>
+		<div class="variables">
+			<h1>VARIABLES</h1>
+					<p>		Containers to hold values</p>
+					<p> 	The keyword for variables is VAR </p>
+					<p>		Variables were used in the examples above</p>
+		</div>
+		<div class="param">
+			<h1>PARAM</h1>					
+				<p>Parameters are names listed in the function definition</p>
+				<p>They are used to send values into the function</p>
+			
+				<h4>Example</h4>
+					<p>My function will have two parameters. Asking what is 15 * 15</p>
+					<p id="param"></p>
+				<script>
+					function param1(a, b){
+						return a*b;
+					}
+					document.getElementById("param").innerHTML = window.param1(15,15);
+				
+				</script>
+		</div>
+		<div class="arrays">
+			<h1>ARRAYS</h1>
+				<p>Arrays are a particular type of variable that can hold more than 1 value at a time. I have demonstrated multiple arrays in examples above.</p>
+				
+				<h4>Format of an array</h4>
+					<p>var array_name = [value1, value2, value3, ...];</p>
+					
+		</div>
+		<div class="associative">
+			<h1>ASSOCIATIVE ARRAYS</h1>
+				<p>Aarays with named index. Also known as hash</p>
+				<p>Objects in JavaScript are associative arrays</p>
+				<h4>Format of an associative array</h4>
+					<p>array={key1: 'value1',key2:'value2'};</p>
+					<p>Key and Value Pairs</p>
+		</div>
+    </body>
+</html>

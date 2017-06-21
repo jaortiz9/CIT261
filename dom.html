@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>DOM Manipulation</title>
+        <link rel="stylesheet" href="main.css">
+		
+		<script>
+            function insertBefore() {
+                var newItem = document.createElement("li");
+                newItem.innerText = "Toyota"
+                var list = document.getElementById("carList");
+                list.insertBefore(newItem, list.childNodes[0]);
+            }
+            function removeChild() {
+                var list = document.getElementById("carList");
+                list.removeChild(list.childNodes[0]);
+            }
+            
+            function appendChild() {
+                var newItem = document.createElement("li");
+                newItem.innerText = "Honda"
+                var list = document.getElementById("carList");
+                list.appendChild(newItem)
+               
+            }
+			
+            function creatingElement(){
+                var newParagraph = document.createElement("p");
+                newParagraph.innerText = "This is new paragraph."        
+                document.body.appendChild(newParagraph);
+            }      
+		</script>	
+    </head>
+    <body>
+        <h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loops.html">Loops</a></li>
+              <li><a href="object.html">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a href="ajax.html">AJAX</a></li>
+              <li><a href="api.html">Local Storage API</a></li>
+              <li><a class= "active" href="#">DOM Manipulation</a></li>
+              <li><a href="manipCSS.html">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a href="eventsJS.html">JS Events</a></li>
+              <li><a href="video.html">Video, Audio, Canvas</a></li>
+              
+            </ul>
+        </div>
+        
+		<div>
+			<h4>Example: List of Cars</h4>
+				<ul1 id="carList">
+					<li>BMW </li>
+					<li>Volvo </li>
+				</ul1>
+			
+					<br/>
+				<p>Insert an item to the beginning list.</p>
+				<button onclick="insertBefore()">Insert Before</button>
+
+				<p>Remove the first item in the list</p>
+				<button onclick="removeChild()">Remove First</button>
+
+				<p>Add an item to the end of the list</p>
+				<button onclick="appendChild()">Append to end</button>
+			
+			<h4>Creating New elements</h4>
+				<p id="p1">This is the first paragraph.</p>
+                <p id="p2">This is the second paragraph.</p>
+                <button onclick="creatingElement()">Create</button> 
+
+		</div>
+    </body>
+</html>

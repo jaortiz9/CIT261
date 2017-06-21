@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Manipulating CSS</title>
+        <link rel="stylesheet" href="main.css">
+	
+		<style>
+			#square {
+				width: 20em;
+				height: 20em;
+				border: 2px inset gray;
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}
+			button {
+  				padding: .5em 2em;
+			}
+			
+			.text1Style {
+				color: pink;
+				font-size: 25px;
+				font-family: arial;
+				text-shadow: 2px 2px black
+					
+			}		
+		</style>
+    </head>
+    <body>
+        <h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>Manipulating CSS Class Properties Using JavaScript</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loops.html">Loops</a></li>
+              <li><a href="object.html">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a href="ajax.html">AJAX</a></li>
+              <li><a href="api.html">Local Storage API</a></li>
+              <li><a href="dom.html">DOM Manipulation</a></li>
+              <li><a class= "active" href="#">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a href="eventsJS.html">JS Events</a></li>
+              <li><a href="video.html">Video, Audio, Canvas</a></li>
+              
+            </ul>
+        </div>
+		<div id="colorChange">
+			<h4>Changing the color of the square</h4>
+				<p>Changed the color and size of the Square</p>
+    			<div id="square"></div>
+				<button onclick="boxChange()">Let's Play</button>
+
+			<script>
+				function boxChange() {
+					document.getElementById("square").style.backgroundColor="#85144b";
+					document.getElementById("square").style.width="10em";
+					document.getElementById("square").style.height="10em";	
+				}
+			</script>
+		</div>
+		<div id="textChange">
+			<h4>Changing Text</h4>
+				<p>I will demonstrate changing color, font family, font size, and shadow.</p>
+				<div id="p1">Janine Ortiz</div>
+				
+				<button onclick=fontChange()>Let's Play</button>
+			<script>
+				function fontChange(){
+					document.getElementById("p1").className="text1Style";
+				}
+			</script>
+
+			
+			<h4>Changing the style</h4>
+				<p>I will demonstrate changing alignment, background color, boarder </p>
+				<p id="p2">Testing out other features</p>
+				<button onclick=styleChange()>Let's Play</button>
+			<script>
+				function styleChange(){
+					document.getElementById("p2").style.textAlign="Center";
+					document.getElementById("p2").style.background="lightblue";
+					document.getElementById("p2").style.border="dotted";
+					
+				}
+			</script>
+		</div>
+    </body>
+</html>

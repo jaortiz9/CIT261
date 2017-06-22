@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student>
+		<NAME>Janine Ortiz</NAME>
+		<age>26</age>
+		<city>Annandale</city>
+		<major>Software Engineering</major>
+	</student>
+	<student>
+		<NAME>Sergio Ortiz</NAME>
+		<age>29</age>
+		<city>Boston</city>
+		<major>Dentistry</major>
+	</student>
+	<student>
+		<NAME>Diosa</NAME>
+		<age>20</age>
+		<city>Kennsington</city>
+		<major>Business</major>
+	</student>
+</students>

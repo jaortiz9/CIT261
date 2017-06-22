@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>XMLHTTP</title>
+        <link rel="stylesheet" href="main.css">
+		<script src="xmlScript.js"></script>
+		<script type="text/javascript" src="http://api.geonames.org/export/geonamesData.js?username=demo"></script>
+
+		<style>
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+				padding: 3px;
+			}
+		</style>
+
+    </head>
+    <body>
+        <h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>Using XMLHTTPRequest to Consume a JSON Web Service</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loops.html">Loops</a></li>
+              <li><a href="object.html">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a class= "active" href="#">XMLHTTP</a></li>
+              <li><a href="api.html">Local Storage API</a></li>
+              <li><a href="dom.html">DOM Manipulation</a></li>
+              <li><a href="manipCSS.html">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a href="eventsJS.html">JS Events</a></li>
+              <li><a href="video.html">Video, Audio, Canvas</a></li>
+              
+            </ul>
+        </div>
+		<div>
+			<h4>Functional in Google Chrome</h4>
+				<button onclick="makeRequest()">Try it</button>
+				<br/>
+			<table id="one" style="visibility: hidden">
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>City</th>
+					<th>Major</th>
+				</tr>
+				<tr>
+					<th id="name"></th>
+					<th id="age"></th>
+					<th id="city"></th>
+					<th id="major"></th>
+				</tr>
+			</table>
+			
+			<h4>Functional in Fireforx</h4>
+			<button type="button" onclick="loadXMLDoc()">Students</button>
+			<p id="demo"></p>
+			<table id="two" style="visibility: hidden">
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>City</th>
+					<th>Major</th>
+				</tr>
+				<tr>
+					<th id="NAME"></th>
+					<th id="AGE"></th>
+					<th id="CITY"></th>
+					<th id="MAJOR"></th>
+				</tr>
+			</table>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>JavaScript Events</title>
+        <link rel="stylesheet" href="main.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		
+		<style>
+			#snakes {
+				margin: 25px;
+				width: 550px;
+				height: 100px;
+				background: yellow;
+				position: relative;
+				font-size: 25px;
+				-webkit-animation-name: nocturnal;
+				-webkit-animation-duration: 5s;
+				animation-name: nocturnal;
+				animation-duration: 5s;
+			}
+			
+			@-webkit-keyframes nocturnal {
+				from {top: 0px;}
+				to {top: 200px;}
+			}
+
+			@keyframes nocturnal {
+				from {top: 0px;}
+				to {top: 200px;}
+			}
+			
+			#trans {
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				-webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
+				transition: 2s;
+			}
+
+			#trans:hover {
+				width: 400px;
+			}
+		</style>
+		<script type="text/javascript">
+			function popup(){
+				alert("Today you'll learn a thing or two about them")
+			}
+			
+			function keyboardFunction() {
+				document.getElementById("eat").innerHTML = "Mice";
+			}
+			
+			function keyLocation(event) {
+				var x = event.location;
+				document.getElementById("keyLoc").innerHTML = "Key location: " + x;
+			}
+			
+			function copyFunction() {
+				document.getElementById("copied").innerHTML = "Up to 20 years!";
+			}
+			
+			function dragStart(event) {
+				event.dataTransfer.setData("Text", event.target.id);
+				document.getElementById("dragMessage").innerHTML = "No, they have teeth";
+			}
+			
+			// ANIMATIONS
+			var x = document.getElementById("snakes");
+
+			x.addEventListener("webkitAnimationStart", myAnimation)
+
+			function myAnimation(event) {
+				this.innerHTML = "Ball Pythons are:" + event.animationName;
+			}
+			
+			// Transitions
+			document.getElementById("trans").addEventListener("webkitTransitionEnd");
+		</script>
+		
+    </head>
+    <body>
+		<h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>Standard JavaScript Events and Animation and Transition Events</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loops.html">Loops</a></li>
+              <li><a href="object.html">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a href="xmlhttp.html">XMLHTTP</a></li>
+              <li><a href="api.html">Local Storage API</a></li>
+              <li><a href="dom.html">DOM Manipulation</a></li>
+              <li><a href="manipCSS.html">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a class= "active" href="#">JS Events</a></li>
+              <li><a href="video.html">Video, Audio, Canvas</a></li>
+            </ul>
+        </div>
+        <div>
+			
+			<h4>Hovering</h4>
+				<a href="#" onmouseover="" onMouseout="popup()">Do you like snakes?</a>
+			
+			<h4>Keyboard Function</h4>
+				<p><i>What does a ball python eat?</i></p>
+				<input type="text" onkeypress="keyboardFunction()">
+				<p id=eat></p>
+						
+			<h4>Drag events</h4>
+				<p><i>Do Ball Pythons have fangs?</i></p>
+				<p ondragstart="dragStart(event)" ondragend="dragEnd(event)" draggable="true" id="dragtarget">Drag me to find out!</p>
+				<p id="dragMessage"></p>
+			
+			<h4>Clipboard Event</h4>
+				<p><i>How long do ball pythons live?</i></p>
+				<input type="text" oncopy="copyFunction()" value="Copy to find out">
+				<p id="copied"></p>
+			
+			<h4>Key Locations</h4>
+				<i>This event will tell you which area the key was pressed</i>
+				<p><i>0 is a standard key (ex. "A")<br/>
+						1 is a left key (ex. the left CTRL key)<br/>
+						2 is a right key (ex. the right CTRL key)<br/>
+						3 is a key on the numeric keypad </i></p>
+				<input type="text" size="40" onkeydown="keyLocation(event)">
+				<p id=keyLoc></p>
+			
+			<h4>Animation</h4>
+			<p><i>Animation event listener</i></p>
+				<div id="snakes"></div>
+			
+			<h4>Transition</h4>
+			<p><i>Transition Event Listener</i></p>
+			<div id="trans"></div>
+			
+		</div>
+		
+    </body>
+</html>

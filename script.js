@@ -1,3 +1,4 @@
+// JSON PARSE
 function exampleParse() {
 	
 	"use strict";
@@ -30,4 +31,28 @@ function exampleStringify() {
 	var myJSON = JSON.stringify(array);
 	document.getElementById("makes").innerHTML = myJSON;
 
+}
+
+//Local Storage API
+
+function setData() {
+   	var vName = document.getElementById("name").value;
+	var vCar = document.getElementById("car").value;
+	
+	localStorage.setItem("name", vName);
+	localStorage.setItem("car", vCar);
+	
+}
+ 
+function getData() {
+	document.getElementById("value1").value = localStorage.getItem("name");
+	document.getElementById("value2").value = localStorage.getItem("car");
+}
+
+var dogList = new Array();
+function setArray() {
+	dogList.push(document.getElementById('dog').value);
+	localStorage.setItem("dog", JSON.stringify(dogList));
+
+	document.getElementById("dogTypes").innerHTML = "Listed breeds: " + dogList + " ";
 }

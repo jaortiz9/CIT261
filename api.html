@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        
+        <title>API Storage</title>
+        <link rel="stylesheet" href="main.css">
+		<script src="script.js"></script>
+		 <style>
+       label {
+           display: inline-block;
+           width: 150px;
+       }
+       input {
+           margin-right: 20px;
+       }
+   </style>
+    </head>
+    <body>
+        <h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loops.html">Loops</a></li>
+              <li><a href="object.html">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a href="xmlhttp.html">XMLHTTP</a></li>
+              <li><a class= "active" href="#">Local Storage API</a></li>
+              <li><a href="dom.html">DOM Manipulation</a></li>
+              <li><a href="manipCSS.html">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a href="eventsJS.html">JS Events</a></li>
+              <li><a href="video.html">Video, Audio, Canvas</a></li>
+              
+            </ul>
+        </div>
+        
+		<div class="content">
+			<h3>Local Storage and Retreiving</h3>
+				<label>What is your name?</label>
+				<input id="name" type="text">
+				<label> What car do you own?</label>
+				<input id="car" type="text">
+				<br><br>
+				<button onclick="setData()">Save Data</button>
+				<br><br><br>
+				<label>Name: </label>
+				<input id="value1" readonly>
+				<label>Car: </label>
+				<input id="value2" readonly>
+				
+				<br><br>
+				<button onclick="getData()">Retrieve Data</button>
+			
+			<h3>Array Storage</h3>
+			<p><i>Let's making a list of dog breeds</i></p>
+				<input id="dog" type="text">
+				<button onclick="setArray()">Save your dog</button>
+				<br/><br/>
+				<div id="dogTypes"></div>
+		</div>
+		
+    </body>
+</html>

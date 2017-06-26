@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Object Creation</title>
+        <link rel="stylesheet" href="main.css">
+		<script>
+			function person(){
+				var person = new Object();
+				person.firstName = "Janine";
+				person.lastName = "Ortiz";
+				person.age = "26";
+				person.height = "4 feet 11";
+
+				document.getElementById("aPerson").innerHTML = person.firstName + " " + person.lastName + " is " + person.age + " years old and " +person.height + " inches tall.";
+			}
+			
+			function car(make, model, color, year){
+				this.makes = make;
+				this.models = model;
+				this.colors = color;
+				this.years = year;
+			}
+			
+			function cars( ){
+				var mine = new car("Honda", "Element", "Silver", 2004);
+				var his = new car("Honda", "Accord", "Sand Stone", 2015);
+				var hers = new car("Ford", "Expedition", "Blue", 2009);
+				
+				document.getElementById("ourCars").innerHTML = "My car is a " + mine.makes + " " + mine.models + ". His is a " +his.makes + " " + his.models + " " + his.years + ". Her car is " + hers.colors + ".";
+			}
+		</script>
+    </head>
+    <body>
+        <h1>Janine Ortiz's 261 Sandbox</h1>
+        <h2>Object Creation Functions, Inheritance, Properties, Methods, Instantiation</h2>
+        
+        <div class="navbar">
+          <ul class="nav" id="topnav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="loops.html">Loops</a></li>
+              <li><a class= "active" href="#">Object Creation</a></li>
+              <li><a href="json.html">JSON Parse</a></li>
+              <li><a href="xmlhttp.html">XMLHTTP</a></li>
+              <li><a href="api.html">Local Storage API</a></li>
+              <li><a href="dom.html">DOM Manipulation</a></li>
+              <li><a href="manipCSS.html">Manipuling CSS</a></li>
+              <li><a href="transCSS.html">CSS Transitions</a></li>
+              <li><a href="eventsJS.html">JS Events</a></li>
+              <li><a href="video.html">Video, Audio, Canvas</a></li>
+              
+            </ul>
+        </div>
+        <div>
+			<h4>Creating a simple Person Object</h4>
+			<i>This will give the Person object characteristics but is limited to one object</i><br/>
+			<button onclick="person()">Person</button>
+			
+			<p id="aPerson"></p>
+			
+			<h4>Object Constructors</h4>
+			<i>This we will create an object prototype so that we can create more than just one object. They will inherit the properties and methods of the prototype</i><br/>
+			<button onclick="cars()">Cars</button>
+			<p id="ourCars"></p>
+
+		</div>
+		
+    </body>
+</html>

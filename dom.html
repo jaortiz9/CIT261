@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
     <head>
         <meta charset="utf-8">
         
@@ -8,28 +7,27 @@
         <link rel="stylesheet" href="main.css">
 		
 		<script>
-            function insertBefore() {
+            function insertFunction() {
                 var newItem = document.createElement("li");
-                newItem.innerText = "Toyota"
+                newItem.innerText = "Toyota";
                 var list = document.getElementById("carList");
                 list.insertBefore(newItem, list.childNodes[0]);
             }
-            function removeChild() {
+            function removeFunction() {
                 var list = document.getElementById("carList");
                 list.removeChild(list.childNodes[0]);
             }
             
-            function appendChild() {
+            function appendFunction() {
                 var newItem = document.createElement("li");
-                newItem.innerText = "Honda"
+                newItem.innerText = "Honda";
                 var list = document.getElementById("carList");
-                list.appendChild(newItem)
-               
+                list.appendChild(newItem);
             }
 			
             function creatingElement(){
                 var newParagraph = document.createElement("p");
-                newParagraph.innerText = "This is new paragraph."        
+                newParagraph.innerText = "This is new paragraph."   ;     
                 document.body.appendChild(newParagraph);
             }      
 		</script>	
@@ -60,17 +58,19 @@
 				<ul1 id="carList">
 					<li>BMW </li>
 					<li>Volvo </li>
+					<li>Porche</li>
+					<li>Hyundai</li>
 				</ul1>
 			
 					<br/>
 				<p>Insert an item to the beginning list.</p>
-				<button onclick="insertBefore()">Insert Before</button>
+				<button onclick="insertFunction()">Insert Before</button>
 
 				<p>Remove the first item in the list</p>
-				<button onclick="removeChild()">Remove First</button>
+				<button onclick="removeFunction()">Remove First</button>
 
 				<p>Add an item to the end of the list</p>
-				<button onclick="appendChild()">Append to end</button>
+				<button onclick="appendFunction()">Append to end</button>
 			
 			<h4>Creating New elements</h4>
 				<p id="p1">This is the first paragraph.</p>

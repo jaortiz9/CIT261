@@ -44,6 +44,47 @@
 				100% {left:0px;top:0px;}
 			}
 			
+			#box3
+			{
+				background:lightblue;
+				width:200px;
+				height:200px;
+				transform: skewX(20deg);
+				animation: skew 3s;
+				animation-iteration-count: 3;
+				animation-direction: alternate;
+			}
+			#box3:hover {
+				animation: roll 3s;
+				animation-iteration-count: 3;
+  				transform: rotate(30deg);
+			}
+			
+			@keyframes skew {
+			  	0% {transform: skewX(20deg);}
+			  	100% {transform: skewX(-20deg);}
+			}
+			
+			@keyframes roll {
+			  	0% {transform: rotate(0);}
+			  	100% {transform: rotate(360deg);}
+			}
+			#box4{
+				background:lightblue;
+				width:200px;
+				height:200px;
+			}
+			#box4:hover{
+				animation: shimmy 3s;
+				animation-iteration-count: 3;
+				animation-direction: alternate;
+			}
+
+			@keyframes shimmy {
+			  	0% {transform: translate(0, 0);}
+				100% {transform: translate(5px, 60px); }
+			}
+			
 		</style>
 		
 		<script type="text/javascript">
@@ -127,6 +168,14 @@
 			</button>			
 		</div>
 		
+		<div class="tranformations">
+			<h3>Transformations</h3>
+			<div id="box3">Transitions</div>
+			<h5>After it stops moving, hover over the box</h5>
+			<div id="box4">Transitions</div>
+			<h5>Hover over to see translate</h5>
+			
+		</div>
         
     </body>
 </html>

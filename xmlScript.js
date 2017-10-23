@@ -3,7 +3,7 @@ function makeRequest(){
 		var parser, xmlDoc;
 			var text = "<students><student>"+
 						"<name>Janine Ortiz</name>"+
-						"<age>26</age>"+
+						"<age>27</age>"+
 						"<city>Annandale</city>"+
 						"<major>Software Engineering</major>"+"</student></student>";
 	

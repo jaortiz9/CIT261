@@ -1,6 +1,5 @@
 // JSON PARSE
-function exampleParse() {
-	
+function exampleParse() {	
 	"use strict";
 
 	var myCar = '{"make": "Mazda", "model": "Protege", "year": 2004,  "color": "Silver","available":"2017-05-25"}';
@@ -16,7 +15,6 @@ function exampleParse() {
 
 
 function exampleStringify() {
-	
 	"use strict";
 
 	var objCar = {"make" : "Mazda", "model" : "Protege", "year" : 2004, "color" : "Silver", "today": new Date()};
@@ -34,7 +32,6 @@ function exampleStringify() {
 }
 
 //Local Storage API
-
 function setData() {
    	var vName = document.getElementById("name").value;
 	var vCar = document.getElementById("car").value;

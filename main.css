@@ -42,7 +42,6 @@ li a:hover:not(.active) {
 }
 
 /*or*/ 
-
 .col:not(:nth-child(1)){
   float:left;
   margin-left: 20px;
